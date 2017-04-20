@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Linkapp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="banner">
+      <div id="menu">
+        <%= image_tag 'logo.png', alt: 'Page title' %>
+      </div>
+      <div id="login">
+        <%= render 'devise/menu/login_items' %>
+        <%= render 'devise/menu/registration_items' %>
+      </div>
+    </div>
+    <div id="site">
+      <div id="main">
+        <%= yield %>
+      </div>
+    </div>
+    <div id="footer">
+      Lorem ipsum...
+    </div>
+  </body>
+</html>

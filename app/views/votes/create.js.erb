@@ -1,0 +1,2 @@
+$('.vote_up').html("<%= Vote.where(article_id: params[:vote][:article_id], vote_type: true).count %>");
+$('.vote_down').html("<%= Vote.where(article_id: params[:vote][:article_id], vote_type: false).count %>");

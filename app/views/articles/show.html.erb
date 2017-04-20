@@ -1,0 +1,30 @@
+<div id="art_view">
+  <div id="art_votes">
+    <div id="vote_up">
+      <%= image_tag 'up.png', alt: 'Vote UP!' %>
+      <br><span class="vote_up"><%= Vote.where(article_id: @article.id, vote_type: true).count %></span>
+    </div>
+    <%= button_to "+", votes_path(@vote), params: {vote: {article_id: @article.id, vote_type: true}}, :method => :post, remote: true %>
+    <div id="vote_down">
+      <span class="vote_down"><%= Vote.where(article_id: @article.id, vote_type: false).count %></span>
+      <%= button_to "-", votes_path(@vote), params: {vote: {article_id: @article.id, vote_type: false}}, :method => :post, remote: true %>
+      <%= image_tag 'down.png', alt: 'Vote DOWN!' %>
+    </div>
+  </div>
+  <div id="art_view_img">
+    <%= image_tag get_img(@article), alt: @article.title %>
+  </div>
+  <div id="art_view_info">
+    <span class="art_title"><%= link_to @article.title, @article.url, target: "_blank" %></span><br>
+    <span class="art_user">By <%= get_user(@article) %></span>
+    <span class="art_url">from <%= link_to get_host(@article.url), @article.url, target: "_blank" %></span>
+    <%= @article.created_at.strftime("%d/%m/%Y %H:%M") %> | <%= link_to 'Edit', edit_article_path(@article) if user_signed_in? && current_user.id == @article.user_id %><br>
+    <span class="art_description"><%= @article.description %></span>
+  </div>
+</div>
+
+<div id="comments_count">
+  Comments: <%= get_comments(@article) %>
+</div>
+
+<%= render template: "comments/index" %>

@@ -1,0 +1,23 @@
+<h3><%= link_to '>New Article<', new_article_path %></h3>
+
+    <% @articles.each do |article| %>
+    <div id="art_on_list">
+      <div id="art_votes">
+        <%= image_tag 'up.png', alt: 'Vote UP!' %>
+        <br><span class="vote_up"><%= Vote.where(article_id: article.id, vote_type: true).count - Vote.where(article_id: article.id, vote_type: false).count %>
+          <%= button_to "+", votes_path(@vote), params: {vote: {article_id: article.id, vote_type: true}}, :method => :post %></span>
+      </div>
+      <div id="art_img">
+        <%= image_tag get_img(article), alt: article.title %>
+      </div>
+      <div id="art_info">
+        <span class="art_title"><%= link_to article.title, article %></span><br>
+        <span class="art_user">By <%= get_user(article) %></span>
+        <span class="art_url">from <%= link_to get_host(article.url), article.url, target: "_blank" %></span> | <%= article.created_at.strftime("%d/%m/%Y %H:%M") %><br>
+        <span class="art_description"><%= article.description %></span>
+        <br><br><span class="art_comments">Comments: <%= get_comments(article) %></span>
+      </div>
+    </div>
+    <% end %>
+
+<br>

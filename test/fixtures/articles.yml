@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Wielkie wydarzenie XXI wieku
+  description: To wlasnie zdarzy sie tego dnia, badz gotowy na nocne obserwacje.
+  url: http://google.pl
+  user_id: 980190962
+
+two:
+  title: Wielkie wydarzenie XXI wiekus
+  description: To wlasnie zdarzy sie tego dnia, badz gotowy na nocne obserwacjes.
+  url: http://google.com
+  user_id: 980190962

@@ -1,0 +1,185 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#art_on_list {
+  background-color: white;
+
+  height: 150px;
+  padding: 1%;
+  margin: 1%;
+  -webkit-box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.43);
+  -moz-box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.43);
+  box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.43);
+}
+
+#art_new {
+  background-color: white;
+
+  height: 400px;
+  padding: 1%;
+  margin: 1%;
+  -webkit-box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.43);
+  -moz-box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.43);
+  box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.43);
+}
+
+#art_view {
+  background-color: white;
+
+  height: 200px;
+  padding: 1%;
+  margin: 1%;
+  -webkit-box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.43);
+  -moz-box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.43);
+  box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.43);
+}
+
+#art_on_list:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+#art_view:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+#art_votes {
+  background-color: white;
+  width: 10%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  color: #ff9900;
+
+  img {
+    height: 60px;
+    width: 60px;
+
+  }
+  #vote_up {
+    span.vote_up {
+
+    }
+  }
+
+  #vote_down {
+    span.vote_down {
+      font-size: 17px;
+      color: red;
+    }
+
+    img {
+      height: 45px;
+      width: 45px;
+
+    }
+  }
+
+}
+
+
+
+
+#art_img {
+  background-color: white;
+  width: 25%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  display:table-cell;
+  vertical-align:middle;
+  margin:auto;
+  img {
+    padding-top: 5%;
+    width: 230px;
+    height: 110px;
+  }
+}
+
+#art_info {
+  background-color: white;
+  width: 63%;
+  height: 85%;
+  float: left;
+  padding: 1%;
+
+  span.art_title {
+    font-weight: bold;
+    font-size: 17px;
+    color: #ff9900;
+
+  }
+  span.art_user {
+    color: #B2BABB;
+  }
+  span.art_url {
+    color: #AED6F1;
+  }
+  span.art_description {
+
+  }
+  span.art_comments {
+    color: #B2BABB;
+  }
+}
+
+#art_view_img {
+  background-color: white;
+  width: 35%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  display:table-cell;
+  vertical-align:middle;
+  margin:auto;
+  img {
+    padding-top: 5%;
+    width: 350px;
+    height: 167px;
+  }
+}
+
+#art_view_info {
+  background-color: white;
+  width: 53%;
+  height: 85%;
+  float: left;
+  padding: 1%;
+
+  span.art_title {
+    font-weight: bold;
+    font-size: 17px;
+    color: #ff9900;
+
+  }
+  span.art_user {
+    color: #B2BABB;
+  }
+  span.art_url {
+    color: #AED6F1;
+  }
+  span.art_description {
+
+  }
+}
+
+#comments_count {
+  background-color: #FBEEE6;
+  font-weight: bold;
+  font-size: 14px;
+  color: #273746;
+
+
+  height: 20px;
+  padding: 1%;
+  margin: 1%;
+  -webkit-box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.43);
+  -moz-box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.43);
+  box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.43);
+}

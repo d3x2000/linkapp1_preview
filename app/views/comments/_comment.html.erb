@@ -1,0 +1,13 @@
+<div id="comment_box">
+  <div id="avatar">
+    <%= image_tag get_avatar(comment.user_id) %>
+  </div>
+  <div id="content">
+    <div id="comment_header">
+      <span class="username"><%= get_user(comment) %></span> <%= comment.created_at.strftime("%d/%m/%Y %H:%M") %> <span class="comment_edit"><%= link_to 'Edit', edit_comment_path(comment) if user_signed_in? && current_user.id == comment.user_id %> <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } if user_signed_in? && current_user.id == comment.user_id %></span>
+    </div>
+    <div id="comment_text">
+      <%= comment.comment_text %>
+    </div>
+  </div>
+</div>

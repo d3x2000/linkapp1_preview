@@ -1,0 +1,13 @@
+<% @comments.each do |comment| %>
+<%= render 'comments/comment', comment: comment %>
+<% end %>
+<% if user_signed_in? %>
+<div id="comment_box_form">
+  <div id="avatar">
+    <%= image_tag get_avatar(current_user.id) %>
+  </div>
+  <div id="content">
+    <%= render 'comments/form', comment: @comment %>
+  </div>
+</div>
+<% end %>
